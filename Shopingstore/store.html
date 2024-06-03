@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Store</title>
+  <style>
+    body {
+      background-color: #f2f2f2; /* Set your desired background color */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: white; /* Set container background color */
+      padding: 20px; /* Add padding for better appearance */
+      border-radius: 10px; /* Add rounded corners to the container */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    }
+
+    .item {
+      display: inline-block;
+      margin: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .navigation {
+      margin-top: 30px;
+    }
+
+    .navigation a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .item img {
+      max-width: 200px; /* Adjust the maximum width as needed */
+      height: auto;
+    }
+
+    .top-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .add-product-form {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <center><button onclick="showReceipt()">Show Receipt</button></center>
+    <h1>Men's Attire Shopping Store</h1>
+
+    <!-- Navigation Bar -->
+    <div class="navigation">
+      <a href="#jeans">Jeans</a>
+      <a href="#tshirts">T-Shirts</a>
+      <a href="#sandos">Sandos</a>
+      <a href="#perfumes">Perfumes</a>
+      <a href="#toys">Toys</a>
+    </div>
+
+    <!-- Jeans Section -->
+    <h2 id="jeans">Jeans</h2>
+    <div class="item">
+      <img src="levisJeans.jpg" alt="Levis Jeans">
+      <p>Levi's Jeans - 170php (Stock: <span id="stock_LevisJeans">10</span>)</p>
+      <button onclick="addToCart('LevisJeans')">Add to Cart</button>
+      <button onclick="addStock('LevisJeans')">Add Stock</button>
+    </div>
+    <div class="item">
+        <img src="addidas.jpg" alt="adidas Jeans">
+        <p>Adidas Jeans - 170Php (Stock: <span id="stock_AdidasJeans">10</span>)</p>
+        <button onclick="addToCart('AdidasJeans')">Add to Cart</button>
+        <button onclick="addStock('AdidasJeans')">Add Stock</button>
+      </div>
+      <div class="item">
+        <img src="nikeJeans.jpg" alt="nike Jeans">
+        <p>Nike Jeans - 170Php (Stock: <span id="stock_NikeJeans">10</span>)</p>
+        <button onclick="addToCart('NikeJeans')">Add to Cart</button>
+        <button onclick="addStock('NikeJeans')">Add Stock</button>
+      </div>
+      <div class="item">
+        <img src="tribalJeans.jpg" alt="tribal Jeans">
+        <p>Tribal Jeans - 170Php (Stock: <span id="stock_TribalJeans">10</span>)</p>
+        <button onclick="addToCart('TribalJeans')">Add to Cart</button>
+        <button onclick="addStock('TribalJeans')">Add Stock</button>
+      </div>
+      <div class="item">
+        <img src="McBethJeans.jpg" alt="McBeth Jeans">
+        <p>McBeth Jeans - 170Php (Stock: <span id="stock_McBethJeans">10</span>)</p>
+        <button onclick="addToCart('McBethJeans')">Add to Cart</button>
+        <button onclick="addStock('McBethJeans')">Add Stock</button>
+      </div>
+    <!-- Add other jeans items similarly -->
+
+    <!-- T-Shirt Section -->
+    <h2 id="tshirts">T-Shirts</h2>
+    <div class="item">
+      <img src="niketshirt.jpg" alt="Nike Tshirt">
+      <p>Nike Tshirt - 180Php (Stock: <span id="stock_NikeTshirt">10</span>)</p>
+      <button onclick="addToCart('NikeTshirt')">Add to Cart</button>
+      <button onclick="addStock('NikeTshirt')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="adidastshirt.jpg" alt="Nike Tshirt">
+      <p>Adidas Tshirt - 180Php (Stock: <span id="stock_AdidasTshirt">10</span>)</p>
+      <button onclick="addToCart('AdidasTshirt')">Add to Cart</button>
+      <button onclick="addStock('AdidasTshirt')">Add Stock</button>
+    </div>
+    <div class="item">
+        <img src="sportstshirt.jpg" alt="Sports Tshirt">
+        <p>Sports Tshirt - 180Php (Stock: <span id="stock_SportTshirt">10</span>)</p>
+        <button onclick="addToCart('SportTshirt')">Add to Cart</button>
+        <button onclick="addStock('SportTshirt')">Add Stock</button>
+      </div>
+      <div class="item">
+        <img src="tribaltshirt.jpg" alt="Tribal Tshirt">
+        <p>Tribal Tshirt - 180Php (Stock: <span id="stock_TribalTshirt">10</span>)</p>
+        <button onclick="addToCart('TribalTshirt')">Add to Cart</button>
+        <button onclick="addStock('TribalTshirt')">Add Stock</button>
+      </div>
+      <div class="item">
+        <img src="mcbethtshirt.jpg" alt="Tribal Tshirt">
+        <p>McBeth Tshirt - 180Php (Stock: <span id="stock_mcTshirt">10</span>)</p>
+        <button onclick="addToCart('mcTshirt')">Add to Cart</button>
+        <button onclick="addStock('mcTshirt')">Add Stock</button>
+      </div>
+    <!-- Add other t-shirt items similarly -->
+
+    <!-- Sandos Section -->
+    <h2 id="sandos">Sandos</h2>
+    <div class="item">
+      <img src="nikesando.jpg" alt="Sando">
+      <p>Nike Sando - 110Php (Stock: <span id="stock_nikeSando">10</span>)</p>
+      <button onclick="addToCart('nikeSando')">Add to Cart</button>
+      <button onclick="addStock('nikeSando')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="tribalsando.jpg" alt="Sando">
+      <p>Tribal Sando - 110Php (Stock: <span id="stock_tribalSando">10</span>)</p>
+      <button onclick="addToCart('tribalSando')">Add to Cart</button>
+      <button onclick="addStock('tribalSando')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="mcbethsando.jpg" alt="Sando">
+      <p>McBeth Sando - 110Php (Stock: <span id="stock_mcbethSando">10</span>)</p>
+      <button onclick="addToCart('mcbethSando')">Add to Cart</button>
+      <button onclick="addStock('mcbethSando')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="adidassando.jpg" alt="Sando">
+      <p>Adidas Sando - 110Php (Stock: <span id="stock_adidasSando">10</span>)</p>
+      <button onclick="addToCart('adidasSando')">Add to Cart</button>
+      <button onclick="addStock('adidasSando')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="sportssando.jpg" alt="Sando">
+      <p>Sports Sando - $110 (Stock: <span id="stock_sportsSando">10</span>)</p>
+      <button onclick="addToCart('sportsSando')">Add to Cart</button>
+      <button onclick="addStock('sportsSando')">Add Stock</button>
+    </div>
+
+    <!-- Add other sando items similarly -->
+
+    <!-- Perfume Section -->
+    <h2 id="perfumes">Perfumes</h2>
+    <div class="item">
+      <img src="penshope.jpg" alt="Perfume">
+      <p>Penshope Perfume - 255 (Stock: <span id="stock_penshopePerfume">10</span>)</p>
+      <button onclick="addToCart('penshopePerfume')">Add to Cart</button>
+      <button onclick="addStock('penshopePerfume')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="poison.jpg" alt="Perfume">
+      <p>Poison Perfume - 255Php (Stock: <span id="stock_poisonPerfume">10</span>)</p>
+      <button onclick="addToCart('poisonPerfume')">Add to Cart</button>
+      <button onclick="addStock('poisonPerfume')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="dior.jpg" alt="Perfume">
+      <p>Dior Perfume - 255Php (Stock: <span id="stock_diorPerfume">10</span>)</p>
+      <button onclick="addToCart('diorPerfume')">Add to Cart</button>
+      <button onclick="addStock('diorPerfume')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="bench.jpg" alt="Perfume">
+      <p>Bench Perfume - 255Php (Stock: <span id="stock_benchPerfume">10</span>)</p>
+      <button onclick="addToCart('benchPerfume')">Add to Cart</button>
+      <button onclick="addStock('benchPerfume')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="afesionado.jpg" alt="Perfume">
+      <p>Aficionado Perfume - 255Php (Stock: <span id="stock_afesionadoPerfume">10</span>)</p>
+      <button onclick="addToCart('afesionadoPerfume')">Add to Cart</button>
+      <button onclick="addStock('afesionadorPerfume')">Add Stock</button>
+    </div>
+    <!-- Add other perfume items similarly -->
+
+    <!-- Toys Section -->
+    <h2 id="toys">Toys</h2>
+    <div class="item">
+      <img src="adidastoys.jpg" alt="Toys">
+      <p>Adidas  Staff Toy - 500Php (Stock: <span id="stock_adidasToys">10</span>)</p>
+      <button onclick="addToCart('adidasToys')">Add to Cart</button>
+      <button onclick="addStock('adidasToys')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="tribalToys.jpg" alt="Toys">
+      <p>Tribal Camel staff Toys - 500Php (Stock: <span id="stock_tribalToys">10</span>)</p>
+      <button onclick="addToCart('tribalToys')">Add to Cart</button>
+      <button onclick="addStock('tribalToys')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="nikeToys.jpg" alt="Toys">
+      <p>Emoticon Pillows  - 500Php (Stock: <span id="stock_nikeToys">10</span>)</p>
+      <button onclick="addToCart('nikeToys')">Add to Cart</button>
+      <button onclick="addStock('nikeToys')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="rockettoys.jpg" alt="Toys">
+      <p>Rocket Toys - 500Php (Stock: <span id="stock_rocketToys">10</span>)</p>
+      <button onclick="addToCart('rocketToys')">Add to Cart</button>
+      <button onclick="addStock('rocketToys')">Add Stock</button>
+    </div>
+    <div class="item">
+      <img src="transtoys.jpg" alt="Toys">
+      <p>Transformer Toys - 500Php (Stock: <span id="stock_transToys">10</span>)</p>
+      <button onclick="addToCart('transToys')">Add to Cart</button>
+      <button onclick="addStock('transToys')">Add Stock</button>
+    </div>
+    <!-- Add other toy items similarly -->
+
+    <!-- Add Product Form -->
+    <div class="add-product-form">
+      <h2>Add New Product</h2>
+      <form id="newProductForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" required><br><br>
+        <label for="productPrice">Product Price:</label>
+        <input type="number" id="productPrice" name="productPrice" required><br><br>
+        <label for="productStock">Product Stock:</label>
+        <input type="number" id="productStock" name="productStock" required><br><br>
+        <button type="button" onclick="addNewProduct()">Add Product</button>
+      </form>
+    </div>
+  </div>
+  
+  <button onclick="scrollToTop()" class="top-btn">Back to Top</button>
+
+  <script>
+    let cartItems = [];
+    let stocks = {
+      'LevisJeans': { price: 170, stock: 10 },
+      'AdidasJeans': { price: 170, stock: 10 },
+      'TribalJeans': { price: 170, stock: 10 },
+      'McBethJeans': { price: 170, stock: 10 },
+      'NikeJeans': { price: 170, stock: 10 },
+      'NikeTshirt': { price: 180, stock: 10 },
+      'AdidasTshirt': { price: 180, stock: 10 },
+      'mcTshirt': { price: 180, stock: 10 },
+      'SportTshirt': { price: 180, stock: 10 },
+      'TribalTshirt': { price: 180, stock: 10 },
+      'nikeSando': { price: 110, stock: 10 },
+      'tribalSando': { price: 110, stock: 10 },
+      'mcbethSando': { price: 110, stock: 10 },
+      'sportsSando': { price: 110, stock: 10 },
+      'adidasSando': { price: 110, stock: 10 },
+      'penshopePerfume': { price: 255, stock: 10 },
+      'poisonPerfume': { price: 255, stock: 10 },
+      'diorPerfume': { price: 255, stock: 10 },
+      'benchPerfume': { price: 255, stock: 10 },
+      'afesionadoPerfume': { price: 255, stock: 10 },
+      'adidasToys': { price: 500, stock: 10 },
+      'tribalToys': { price: 500, stock: 10 },
+      'rocketToys': { price: 500, stock: 10 },
+      'transToys': { price: 500, stock: 10 },
+      'nikeToys': { price: 500, stock: 10 },
+    };
+
+    function addToCart(item) {
+      if (stocks[item].stock > 0) {
+        let itemIndex = cartItems.findIndex(cartItem => cartItem.name === item);
+        if (itemIndex === -1) {
+          cartItems.push({ name: item, price: stocks[item].price, quantity: 1 });
+        } else {
+          cartItems[itemIndex].quantity++;
+        }
+        alert("Item added to cart: " + item);
+        stocks[item].stock--;
+        updateStockDisplay(item);
+      } else {
+        alert("Sorry, " + item + " is out of stock.");
+      }
+    }
+
+    function addStock(item) {
+      stocks[item].stock++;
+      updateStockDisplay(item);
+      alert("Stock added for " + item);
+    }
+
+    function updateStockDisplay(item) {
+      document.getElementById('stock_' + item).textContent = stocks[item].stock;
+    }
+
+    function showReceipt() {
+      let receipt = "Receipt:\n";
+      let total = 0;
+      for (let i = 0; i < cartItems.length; i++) {
+        receipt += cartItems[i].name + "-Php" + cartItems[i].price + " x " + cartItems[i].quantity + "\n";
+        total += cartItems[i].price * cartItems[i].quantity;
+      }
+      receipt += "\nTotal: Php:" + total;
+      alert(receipt);
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.querySelector('.top-btn').style.display = "block";
+      } else {
+        document.querySelector('.top-btn').style.display = "none";
+      }
+    }
+
+    function scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    function addNewProduct() {
+      const productName = document.getElementById('productName').value;
+      const productPrice = document.getElementById('productPrice').value;
+      const productStock = document.getElementById('productStock').value;
+
+      if (productName && productPrice && productStock) {
+        stocks[productName] = { price: parseInt(productPrice), stock: parseInt(productStock) };
+        alert("New product added: " + productName);
+        document.getElementById('productName').value = '';
+        document.getElementById('productPrice').value = '';
+        document.getElementById('productStock').value = '';
+        addProductSection(productName, productPrice, productStock);
+      } else {
+        alert("Please fill out all fields.");
+      }
+    }
+
+    function addProductSection(name, price, stock) {
+      const sectionId = name.toLowerCase();
+      const container = document.querySelector('.container');
+
+      const newSection = document.createElement('div');
+      newSection.classList.add('item');
+      newSection.innerHTML = `
+        <h2 id="${sectionId}">${name}</h2>
+        <img src="${sectionId}.jpg" alt="${name}">
+        <p>${name} - $${price} (Stock: <span id="stock_${sectionId}">${stock}</span>)</p>
+        <button onclick="addToCart('${name}')">Add to Cart</button>
+        <button onclick="addStock('${name}')">Add Stock</button>
+      `;
+
+      container.appendChild(newSection);
+    }
+  </script>
+</body>
+</html>

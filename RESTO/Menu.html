@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #97d8f7;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .restaurant-menu {
+            background-color: #baa4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-section {
+            background-color: #facefc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .desert {
+            background-color: #f3fa8c;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .drinks {
+            background-color: #ebb84b;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .vegies {
+            background-color: #3bdd50;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        label img {
+            width: 170px;
+            margin-right: 70px;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #receipt {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            .menu-section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Kusina ni Kerrol Menu</h1>
+
+    <div class="restaurant-menu">
+        <div class="menu-section">
+            <h2>Main Dish</h2>
+            <label>
+                <img src="adobo.jpg" >
+                <!--input type="checkbox" name="mainDish" value="Adobo mala kerrol mo" data-price="100pesos"--> ADOBO ALA KERROL (100php)
+            </label>
+            <label>
+                <img src="menudo.jpg" >
+                 Menudong Malungkot (100php)
+            </label>
+            <label>
+                <img src="tinola.jpg" >
+                 TINOLA KO TO (100php)
+            </label>
+            <label>
+                <img src="sinigang.jpg" >
+                 SiniGangster (100php)
+            </label>
+            <label>
+                <img src="gata.jpg" >
+                 Ginataang gata sa kakang gata (100php)
+            </label>
+            <!-- Add more main dish options here -->
+        </div>
+        <div class = "desert">
+        <h2>Desert</h2>
+            <label>
+                <img src="chocolate.jpg">
+                 Chocolate (Php:75)
+            </label>
+            <label>
+                <img src="candy.jpg">
+                 Candies (Php:75)
+            </label>
+            <label>
+                <img src="icecream.jpg" >
+                IceCream (Php:50)
+            </label>
+            <label>
+                <img src="bananasplit.jpg" >
+                 Banana Split (Php:100)
+            </label>
+            <label>
+                <img src="vanillacake.jpg">
+                 Vanilla Cake (Php:50)
+            </label>
+        </div>
+        <div class = "drinks">
+            <h2>Drinks</h2>
+            <label>
+                <img src="beer.jpg">
+                 Beers (Php:250)
+            </label>
+            <label>
+                <img src="tea.jpg">
+                 Milktea (Php:250)
+            </label>
+            <label>
+                <img src="coffee.jpg" >
+                Coffee (Php:150)
+            </label>
+            <label>
+                <img src="fruitjuices.jpg" >
+                Fruit Juices (Php:175)
+            </label>
+            <label>
+                <img src="water.jpg" >
+                Mineral Water (Php:50)
+            </label>
+            </div>
+            <div class = "vegies">
+            <h2>Vegies</h2>
+            <label>
+                <img src="salad.jpg">
+                 Italian Salad (Php:275)
+            </label>
+            <label>
+                <img src="soup.jpg" >
+                 KangKong Chips(Php:300)
+            </label>
+            <label>
+                <img src="pasta.jpg" >
+                 Vegie Soup(Php:300)
+            </label>
+            <label>
+                <img src="rolls.jpg" >
+                 Vegie Rolls(Php:300)
+            </label>
+            <label>
+                <img src="kangkong.jpg" >
+                 KangKong Chips(Php:300)
+            </label>
+        </div>
+    
+            <h2>Ads on </h2>
+            <label>
+                <img src="salt.jpg" >
+                Salt (Php:5)
+            </label>
+            <label>
+                <img src="sugar.jpg">
+                Sugar (Php:5)
+            </label>
+            <label>
+                <img src="bacon.jpg" >
+                Bacon (Php:50)
+            </label>
+            <label>
+                <img src="cheese.jpg">
+                Cheese (Php:35)
+            </label>
+            <label>
+                <img src="egg.jpg" >
+                 Egg(Php:15)
+            </label>
+        <!-- Add more menu sections here -->
+    </div>
+
+    <!--button onclick="generateReceipt()">Generate Receipt</button>
+
+    <div id="receipt"></div>
+
+    <script>
+        function generateReceipt() {
+            const selectedItems = document.querySelectorAll('input[type="checkbox"]:checked');
+            let totalCost = 0;
+            let receiptHTML = '<h2>Receipt</h2><ul>';
+            
+            selectedItems.forEach(item => {
+                const itemName = item.value;
+                const itemPrice = parseFloat(item.dataset.price);
+                totalCost += itemPrice;
+                receiptHTML += `<li>${itemName} - Php:${itemPrice.toFixed(2)}</li>`;
+            });
+
+            receiptHTML += `</ul><p>Total: Php:${totalCost.toFixed(2)}</p>`;
+            document.getElementById('receipt').innerHTML = receiptHTML;
+        }
+    </script-->
+</body>
+</html>

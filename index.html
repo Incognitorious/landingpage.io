@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Buttons</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .responsive-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .responsive-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .shopping-store {
+            background-color: #ff5733;
+        }
+
+        .shopping-store:hover {
+            background-color: #e74c3c;
+        }
+
+        .resume {
+            background-color: #3498db;
+        }
+
+        .resume:hover {
+            background-color: #2980b9;
+        }
+
+        .regform {
+            background-color: #2ecc71;
+        }
+
+        .regform:hover {
+            background-color: #27ae60;
+        }
+
+        .restaurant {
+            background-color: #f39c12;
+        }
+
+        .restaurant:hover {
+            background-color: #e67e22;
+        }
+
+        @media (max-width: 600px) {
+            .responsive-button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my Landing Page</h1>
+    <div class="button-container">
+        <a href="Shopingstore/store.html" class="responsive-button shopping-store">Shopping Store</a>
+        <a href="RESUME/Kerrol_tampus.html" class="responsive-button resume">RESUME</a>
+        <a href="REGFORM/tampus_kerrol_regFORM.html" class="responsive-button regform">Regform</a>
+        <a href="RESTO/Menu.html" class="responsive-button restaurant">Restaurant</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
